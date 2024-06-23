@@ -4,12 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-
-    <!-- Script Chart JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
@@ -98,7 +95,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-10 d-flex my-auto bg-light align-items-center justify-content-between px-4">
+      <div class="col-10 d-flex my-auto bg-light align-self-center justify-content-between px-4">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb text-dark align-items-center d-flex">
             <li class="breadcrumb-item"><a href="#">Projects</a></li>
@@ -215,10 +212,10 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <ul class="nav nav-tabs mt-3">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Summary</a>
+          <a class="nav-link" href="workorder-summary.html">Summary</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="workorder-input.html">Input Plan</a>
+          <a class="nav-link active" href="#">Input Plan</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Daily Report</a>
@@ -227,154 +224,212 @@
           <a class="nav-link" href="#">Detail</a>
         </li>
       </ul>
+      <!-- Filter Navigation -->
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-2 border-bottom">
+        <div class="d-flex align-items-center gap-2 my-auto">
+          <ul class="pagination pagination-sm align-self-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link d-flex align-items-center gap-1" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M8 14q-.425 0-.712-.288T7 13t.288-.712T8 12t.713.288T9 13t-.288.713T8 14m4 0q-.425 0-.712-.288T11 13t.288-.712T12 12t.713.288T13 13t-.288.713T12 14m4 0q-.425 0-.712-.288T15 13t.288-.712T16 12t.713.288T17 13t-.288.713T16 14M5 22q-.825 0-1.412-.587T3 20V6q0-.825.588-1.412T5 4h1V2h2v2h8V2h2v2h1q.825 0 1.413.588T21 6v14q0 .825-.587 1.413T19 22zm0-2h14V10H5zM5 8h14V6H5zm0 0V6z"
+                  />
+                </svg>
+                Now
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+          <h6 class="fs-xs align-self-center">Week 3 (10 Jun 2024 - 16 Jun 2024)</h6>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Group Action</button>
+          <a href="workorder-create.html" type="button" class="btn btn-primary btn-sm d-flex gap-2 align-items-center"> Go </a>
+          <h6 class="fs-xs align-self-center my-auto">0 of 9 Selected</h6>
+          <a href="#" class="align-self-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0" />
+            </svg>
+          </a>
+        </div>
+      </div>
 
-      <!-- Chart -->
-      <canvas id="myChart" class="my-4"></canvas>
       <!-- Table View -->
       <table class="table table-bordered mb-4">
         <thead class="bg-secondary">
           <tr class="text-center align-middle text-light fw-bold fs-sm">
-            <th scope="col" class="col-3">Activity Name</th>
+            <th scope="col" id="tableid">
+              <input class="form-check-input" type="checkbox" value="" id="checkactivity" />
+            </th>
+            <th scope="col" id="payment">Activity ID</th>
+            <th scope="col" class="col-3" id="wo-title">Activity Name</th>
             <th scope="col">Start Date</th>
             <th scope="col">End Date</th>
-            <th scope="col">Status</th>
-            <th scope="col">Progress Complete (%)</th>
+            <th scope="col">Weight Factor (%)</th>
+            <th scope="col" id="payment">Incr. Plan (%)</th>
+            <th scope="col">Cumm. Plan (%)</th>
+            <th scope="col">Incr. Actual (%)</th>
+            <th scope="col">Cumm. Actual (%)</th>
+            <th scope="col">Dev. Incr. (%)</th>
+            <th scope="col">Dev. Plan (%)</th>
           </tr>
         </thead>
         <tbody class="fs-xs">
           <tr class="bg-teal">
+            <th class="text-center align-middle"><input class="form-check-input" type="checkbox" value="" id="checkactivity" /></th>
+            <td></td>
             <td class="fw-semibold">PENAMBAHAN SUMUR DAN POMPA</td>
             <td>10-06-2024</td>
             <td>14-06-2024</td>
-            <td class="d-flex align-items-center gap-2">
-              <div class="spinner-border spinner-border-sm text-danger" role="status"></div>
-              (Delay)
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 38%">38%</div>
-              </div>
-            </td>
+            <td class="text-end">100</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">38</td>
+            <td class="text-end">38</td>
+            <td class="text-end">38</td>
+            <td class="text-end">38</td>
           </tr>
           <tr class="bg-warning">
+            <th class="text-center align-middle"><input class="form-check-input" type="checkbox" value="" id="checkactivity" /></th>
+            <td></td>
             <td class="fw-semibold">PERENCANAAN</td>
             <td>10-06-2024</td>
             <td>10-06-2024</td>
-            <td class="d-flex align-items-center gap-2">
-              <div class="spinner-grow spiners spinner-grow-sm text-success" role="status"></div>
-              (On Track)
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%">100%</div>
-              </div>
-            </td>
+            <td class="text-end">20</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">100</td>
+            <td class="text-end">100</td>
+            <td class="text-end">100</td>
+            <td class="text-end">100</td>
           </tr>
           <tr>
+            <th class="text-center align-middle"><input class="form-check-input" type="checkbox" value="" id="checkactivity" /></th>
+            <td></td>
             <td>Survey Lokasi</td>
             <td>10-06-2024</td>
             <td>10-06-2024</td>
-            <td class="d-flex align-items-center gap-2">
-              <div class="spinner-grow spiners spinner-grow-sm text-success" role="status"></div>
-              (On Track)
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%">100%</div>
-              </div>
-            </td>
+            <td class="text-end">20</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">100</td>
+            <td class="text-end">100</td>
+            <td class="text-end">100</td>
+            <td class="text-end">100</td>
           </tr>
           <tr class="bg-warning">
+            <th class="text-center align-middle"><input class="form-check-input" type="checkbox" value="" id="checkactivity" /></th>
+            <td></td>
             <td class="fw-semibold">PENGERJAAN</td>
             <td>11-06-2024</td>
             <td>13-06-2024</td>
-            <td class="d-flex align-items-center gap-2">
-              <div class="spinner-border spinner-border-sm text-danger" role="status"></div>
-              (Delay)
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 30%">30%</div>
-              </div>
-            </td>
+            <td class="text-end">60</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">30</td>
+            <td class="text-end">30</td>
+            <td class="text-end">30</td>
+            <td class="text-end">30</td>
           </tr>
           <tr>
+            <th class="text-center align-middle"><input class="form-check-input" type="checkbox" value="" id="checkactivity" /></th>
+            <td></td>
             <td>Penggalian Sumur</td>
             <td>11-06-2024</td>
             <td>12-06-2024</td>
-            <td class="d-flex align-items-center gap-2">
-              <div class="spinner-border spiners spinner-border-sm text-danger" role="status"></div>
-              (Delay)
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 40%">40%</div>
-              </div>
-            </td>
+            <td class="text-end">20</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">40</td>
+            <td class="text-end">40</td>
+            <td class="text-end">40</td>
+            <td class="text-end">40</td>
           </tr>
           <tr>
+            <th class="text-center align-middle"><input class="form-check-input" type="checkbox" value="" id="checkactivity" /></th>
+            <td></td>
             <td>Pembelian Pompa</td>
             <td>11-06-2024</td>
             <td>11-06-2024</td>
-            <td class="d-flex align-items-center gap-2">
-              <div class="spinner-border spiners spinner-border-sm text-danger" role="status"></div>
-              (Delay)
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 50%">50%</div>
-              </div>
-            </td>
+            <td class="text-end">20</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">50</td>
+            <td class="text-end">50</td>
+            <td class="text-end">50</td>
+            <td class="text-end">50</td>
           </tr>
           <tr>
+            <th class="text-center align-middle"><input class="form-check-input" type="checkbox" value="" id="checkactivity" /></th>
+            <td></td>
             <td>Pemasangan Pompa</td>
             <td>13-06-2024</td>
             <td>13-06-2024</td>
-            <td class="d-flex align-items-center gap-2">
-              <div class="spinner-border spiners spinner-border-sm text-danger" role="status"></div>
-              (Delay)
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
-              </div>
-            </td>
+            <td class="text-end">20</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">00</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
           </tr>
           <tr class="bg-warning">
+            <th class="text-center align-middle"><input class="form-check-input" type="checkbox" value="" id="checkactivity" /></th>
+            <td></td>
             <td class="fw-semibold">TESTING</td>
             <td>14-06-2024</td>
             <td>14-06-2024</td>
-            <td class="d-flex align-items-center gap-2">
-              <div class="spinner-border spinner-border-sm text-danger" role="status"></div>
-              (Delay)
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
-              </div>
-            </td>
+            <td class="text-end">20</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
           </tr>
           <tr>
+            <th class="text-center align-middle"><input class="form-check-input" type="checkbox" value="" id="checkactivity" /></th>
+            <td></td>
             <td>Uji Fungsi</td>
             <td>14-06-2024</td>
             <td>14-06-2024</td>
-            <td class="d-flex align-items-center gap-2">
-              <div class="spinner-border spiners spinner-border-sm text-danger" role="status"></div>
-              (Delay)
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
-              </div>
-            </td>
+            <td class="text-end">20</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+            <td class="text-end">0</td>
+          </tr>
+          <tr>
+            <td colspan="5" class="text-end">Grand Total</td>
+            <td class="text-end">100</td>
+            <td class="text-end"></td>
+            <td class="text-end"></td>
+            <td class="text-end">38</td>
+            <td class="text-end">38</td>
+            <td colspan="2" class="text-end"></td>
           </tr>
         </tbody>
       </table>
+      <div class="input-group pb-5">
+        <button class="btn btn-primary input-group-text text-light" id="basic-addon1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z" /></svg>
+        </button>
+        <input type="text" class="form-control" placeholder="Start typing to create an activity" aria-label="Username" aria-describedby="basic-addon1" />
+      </div>
     </main>
     <!-- Bootstrap Bundle Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-    <!-- Chart JS -->
-    <script src="/js/script.js"></script>
   </body>
 </html>

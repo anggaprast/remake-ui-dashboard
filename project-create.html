@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
   </head>
@@ -95,19 +95,8 @@
           </li>
         </ul>
       </div>
-      <div class="col-10 d-flex my-auto bg-light align-self-center justify-content-between px-4">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb text-dark align-items-center d-flex">
-            <li class="breadcrumb-item"><a href="#">Projects</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Rehabilitasi Pos Pantau Palopo</li>
-            <li class="mx-3 fs-sm p-1 rounded-1 text-light bg-secondary" aria-current="page">Pemeliharaan</li>
-          </ol>
-        </nav>
-        <a href="#" class="align-self-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0" />
-          </svg>
-        </a>
+      <div class="col-10 d-flex my-auto bg-light align-self-center">
+        <h6 class="mt-2 mx-4 text-dark align-self-center">Projects</h6>
       </div>
     </header>
 
@@ -210,92 +199,78 @@
     </aside>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <ul class="nav nav-tabs mt-3">
-        <li class="nav-item">
-          <a class="nav-link" href="workorder-list.html">Work Order</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Project Health</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cash Flow</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Detail</a>
-        </li>
-      </ul>
-
-      <!-- Table View -->
-      <h5 class="fs-4 fw-semibold my-3">Project Info</h5>
-      <table class="table table-striped-columns">
-        <tbody class="fs-xs">
-          <tr class="border-bottom border-2">
-            <td class="col-3 fw-semibold" id="tablehead">Project</td>
-            <td class="col-10">Rehabilitasi Pos Pantau Palopo</td>
-          </tr>
-          <tr class="border-bottom border-2">
-            <td class="col-3 fw-semibold" id="tablehead">Amount</td>
-            <td class="col-10">-</td>
-          </tr>
-          <tr class="border-bottom border-2">
-            <td class="col-3 fw-semibold" id="tablehead">Location</td>
-            <td class="col-10">-</td>
-          </tr>
-          <tr class="border-bottom border-2">
-            <td class="col-3 fw-semibold" id="tablehead">Customer</td>
-            <td class="col-10">Kemenhub</td>
-          </tr>
-          <tr class="border-bottom border-2">
-            <td class="col-3 fw-semibold" id="tablehead">Project Manager</td>
-            <td class="col-10">-</td>
-          </tr>
-          <tr class="border-bottom border-2">
-            <td class="col-3 fw-semibold" id="tablehead">Project Type</td>
-            <td class="col-10">Operation & Maintenance</td>
-          </tr>
-          <tr class="border-bottom border-2">
-            <td class="col-3 fw-semibold" id="tablehead">Start Date</td>
-            <td class="col-10">-</td>
-          </tr>
-          <tr class="border-bottom border-2">
-            <td class="col-3 fw-semibold" id="tablehead">End Date</td>
-            <td class="col-10">-</td>
-          </tr>
-          <tr class="border-bottom border-2">
-            <td class="col-3 fw-semibold" id="tablehead">Weekly Period Start Day</td>
-            <td class="col-10">MONDAY</td>
-          </tr>
-          <tr class="border-bottom border-2">
-            <td class="col-3 fw-semibold" id="tablehead">Employees With Access</td>
-            <td class="col-10">-</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="d-flex align-items-center justify-content-between my-3">
-        <h5 class="fs-4 fw-semibold text-center">Employees</h5>
-        <a href="#" type="button" class="btn btn-outline-primary btn-sm d-flex gap-2 align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
-            <path fill="currentColor" d="M18.42 16.31a5.7 5.7 0 1 1 5.76-5.7a5.74 5.74 0 0 1-5.76 5.7m0-9.4a3.7 3.7 0 1 0 3.76 3.7a3.74 3.74 0 0 0-3.76-3.7" />
-            <path
-              fill="currentColor"
-              d="M18.42 16.31a5.7 5.7 0 1 1 5.76-5.7a5.74 5.74 0 0 1-5.76 5.7m0-9.4a3.7 3.7 0 1 0 3.76 3.7a3.74 3.74 0 0 0-3.76-3.7m3.49 10.74a20.6 20.6 0 0 0-13 2a1.77 1.77 0 0 0-.91 1.6v3.56a1 1 0 0 0 2 0v-3.43a18.92 18.92 0 0 1 12-1.68Z"
-            />
-            <path fill="currentColor" d="M33 22h-6.7v-1.48a1 1 0 0 0-2 0V22H17a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V23a1 1 0 0 0-1-1m-1 10H18v-8h6.3v.41a1 1 0 0 0 2 0V24H32Z" />
-            <path
-              fill="currentColor"
-              d="M21.81 27.42h5.96v1.4h-5.96zM10.84 12.24a18 18 0 0 0-7.95 2A1.67 1.67 0 0 0 2 15.71v3.1a1 1 0 0 0 2 0v-2.9a16 16 0 0 1 7.58-1.67a7.3 7.3 0 0 1-.74-2m22.27 1.99a17.8 17.8 0 0 0-7.12-2a7.5 7.5 0 0 1-.73 2A15.9 15.9 0 0 1 32 15.91v2.9a1 1 0 1 0 2 0v-3.1a1.67 1.67 0 0 0-.89-1.48m-22.45-3.62v-.67a3.07 3.07 0 0 1 .54-6.11a3.15 3.15 0 0 1 2.2.89a8.2 8.2 0 0 1 1.7-1.08a5.13 5.13 0 0 0-9 3.27a5.1 5.1 0 0 0 4.7 5a7.4 7.4 0 0 1-.14-1.3m14.11-8.78a5.17 5.17 0 0 0-3.69 1.55a8 8 0 0 1 1.9 1a3.14 3.14 0 0 1 4.93 2.52a3.09 3.09 0 0 1-1.79 2.77a7 7 0 0 1 .06.93a8 8 0 0 1-.1 1.2a5.1 5.1 0 0 0 3.83-4.9a5.12 5.12 0 0 0-5.14-5.07"
-            />
-          </svg>
-          Add Employee
-        </a>
-      </div>
-      <table class="table table-striped-columns mb-5">
-        <tbody class="fs-xs">
-          <tr class="border-bottom border-2">
-            <td class="col-10 text-center">No Employees</td>
-          </tr>
-        </tbody>
-      </table>
+      <!-- Project Form -->
+      <form class="w-75 m-auto my-4 p-4 bg-form">
+        <h6 class="text-center mb-3 fw-semibold fs-4">Create New Project</h6>
+        <div class="mb-3">
+          <label for="name" class="form-label fs-sm fw-semibold">Project Name</label>
+          <input type="text" class="form-control" id="name" />
+        </div>
+        <div class="mb-3">
+          <label for="status" class="form-label fs-sm fw-semibold">Status</label>
+          <select id="status" class="form-select">
+            <option selected disabled>Choose Status</option>
+            <option>Status 1</option>
+            <option>Status 2</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="amount" class="form-label fs-sm fw-semibold">Amount</label>
+          <input type="number" class="form-control" id="amount" placeholder="Amount" />
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label fs-sm fw-semibold">Location</label>
+          <input type="name" class="form-control" id="location" placeholder="Location" />
+        </div>
+        <div class="mb-3">
+          <label for="projectmanager" class="form-label fs-sm fw-semibold">Project Manager</label>
+          <select id="projectmanager" class="form-select">
+            <option selected disabled>Choose Project Manager</option>
+            <option>Status 1</option>
+            <option>Status 2</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="projecttype" class="form-label fs-sm fw-semibold">Project Type</label>
+          <select id="projecttype" class="form-select">
+            <option selected disabled>Choose Project Type</option>
+            <option>Status 1</option>
+            <option>Status 2</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="customer" class="form-label fs-sm fw-semibold">Customer</label>
+          <select id="customer" class="form-select">
+            <option selected disabled>Choose Customer</option>
+            <option>Status 1</option>
+            <option>Status 2</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="startdate" class="form-label fs-sm fw-semibold">Date Start</label>
+          <input type="date" class="form-control" id="startdate" />
+        </div>
+        <div class="mb-3">
+          <label for="enddate" class="form-label fs-sm fw-semibold">Date End</label>
+          <input type="date" class="form-control" id="enddate" />
+        </div>
+        <div class="mb-3">
+          <label for="weeklyperiod" class="form-label fs-sm fw-semibold">Status</label>
+          <select id="weeklyperiod" class="form-select">
+            <option selected disabled>MONDAY</option>
+            <option>Status 1</option>
+            <option>Status 2</option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-5">
+          <a href="projectlist.html" type="cancel" class="btn btn-outline-danger">Cancel</a>
+          <div class="d-flex justify-content-end.align-items-center gap-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-outline-primary">Submit & Add Another</button>
+            <button type="submit" class="btn btn-outline-primary">Submit & Countinue Editing</button>
+          </div>
+        </div>
+      </form>
     </main>
     <!-- Bootstrap Bundle Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

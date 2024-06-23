@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  </head>
+  <body>
+    <header class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
+      <div class="dropdown">
+        <a class="d-flex gap-2 align-items-center px-2 mx-2 text-decoration-none text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M6.75 2.5A4.25 4.25 0 0 1 11 6.75V11H6.75a4.25 4.25 0 0 1 0-8.5m0 10.5H11v4.25A4.25 4.25 0 1 1 6.75 13m10.5-10.5a4.25 4.25 0 0 1 0 8.5H13V6.75a4.25 4.25 0 0 1 4.25-4.25M13 13h4.25A4.25 4.25 0 1 1 13 17.25z" />
+          </svg>
+          Dashboard Apps
+        </a>
+        <ul class="dropdown-menu mt-2" id="apps">
+          <li class="px-2">
+            <a class="dropdown-item d-flex align-items-center gap-2 p-2 rounded-2" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm5-2V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m-4 5v.01" />
+                  <path d="M3 13a20 20 0 0 0 18 0" />
+                </g>
+              </svg>
+              Project
+            </a>
+          </li>
+          <li class="px-2">
+            <a class="dropdown-item d-flex align-items-center gap-2 p-2 rounded-2" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M8 14q-.425 0-.712-.288T7 13t.288-.712T8 12t.713.288T9 13t-.288.713T8 14m4 0q-.425 0-.712-.288T11 13t.288-.712T12 12t.713.288T13 13t-.288.713T12 14m4 0q-.425 0-.712-.288T15 13t.288-.712T16 12t.713.288T17 13t-.288.713T16 14M5 22q-.825 0-1.412-.587T3 20V6q0-.825.588-1.412T5 4h1V2h2v2h8V2h2v2h1q.825 0 1.413.588T21 6v14q0 .825-.587 1.413T19 22zm0-2h14V10H5z"
+                />
+              </svg>
+              Attendace
+            </a>
+          </li>
+          <li class="px-2">
+            <a class="dropdown-item d-flex align-items-center gap-2 p-2 rounded-2" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                <g fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M29 13.48a1 1 0 0 1-1-1V7.882a10 10 0 0 0-3-.807v3.405a1 1 0 0 1-2 0V7.02a8.9 8.9 0 0 0-3 .69v4.77a1 1 0 0 1-2 0V8.955a7.5 7.5 0 0 0-2.04 2.808q-.144.12-.282.25c-.243.91-.217 1.672-.045 2.15a1 1 0 0 1-1.882.676a4 4 0 0 1-.148-.525c-1.466 2.051-.114 3.533 2.493 4.447a8 8 0 1 0 15.809 0c2.611-.916 3.963-2.402 2.484-4.459q-.06.27-.15.53a1 1 0 1 1-1.887-.662c.195-.556.2-1.295-.017-2.098a4 4 0 0 0-.236-.122c-.402-.99-1.104-1.983-2.099-2.818v3.35a1 1 0 0 1-1 1m-4.356 6.375a1.5 1.5 0 1 0-1.288-2.71a1.5 1.5 0 0 0 1.288 2.71M24 22c1.51 0 2.796-.956 3.287-2.295a27 27 0 0 0 2.674-.391Q30 19.652 30 20a6 6 0 1 1-11.961-.686c.842.17 1.742.3 2.674.39A3.5 3.5 0 0 0 24 22"
+                    clip-rule="evenodd"
+                  />
+                  <path d="M25 7a1 1 0 1 0-2 0z" />
+                  <path fill-rule="evenodd" d="M28.466 28.4c1.15.184 2.348.43 3.534.735V42H16V29.135a40 40 0 0 1 3.534-.735L23 31h2zM26 37a2 2 0 1 1-4 0a2 2 0 0 1 4 0" clip-rule="evenodd" />
+                  <path d="M12 30.425a29 29 0 0 1 2-.717V42h-2zm22-.717c.687.22 1.357.459 2 .717V42h-2zm-24 1.637C7.635 32.597 6 34.167 6 36v6h4zM42 36c0-1.833-1.635-3.404-4-4.655V42h4z" />
+                </g>
+              </svg>
+              Worker
+            </a>
+          </li>
+          <li class="px-2">
+            <a class="dropdown-item d-flex align-items-center gap-2 p-2 rounded-2" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M19 2H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h4l2.29 2.29c.39.39 1.02.39 1.41 0L15 20h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-7 3.3c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7S9.3 9.49 9.3 8s1.21-2.7 2.7-2.7M18 16H6v-.9c0-2 4-3.1 6-3.1s6 1.1 6 3.1z"
+                />
+              </svg>
+              Customer
+            </a>
+          </li>
+          <li class="px-2">
+            <a class="dropdown-item d-flex align-items-center gap-2 p-2 rounded-2" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 26 26">
+                <path
+                  fill="currentColor"
+                  d="M22.438-.063c-.375 0-.732.17-1.032.47l-.718.687l4.218 4.218l.688-.718c.6-.6.6-1.494 0-2.094L23.5.406c-.3-.3-.688-.469-1.063-.469zM20 1.688l-1.094.907l4.5 4.5l1-1zm-1.688 1.625l-9.03 8.938a.975.975 0 0 0-.126.125l-.062.031a.975.975 0 0 0-.219.438l-1.219 4.281a.975.975 0 0 0 1.219 1.219l4.281-1.219a.975.975 0 0 0 .656-.531l8.876-8.782L21 6v.094l-1.188-1.188h.094l-1.593-1.593zM.813 4A1 1 0 0 0 0 5v20a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V14a1 1 0 1 0-2 0v10H2V6h10a1 1 0 1 0 0-2H1a1 1 0 0 0-.094 0a1 1 0 0 0-.094 0zm9.813 9.813l1.375.093l.094 1.5l-1.375.406l-.531-.53z"
+                />
+              </svg>
+              Procurement
+            </a>
+          </li>
+          <li class="px-2">
+            <a class="dropdown-item d-flex align-items-center gap-2 p-2 rounded-2" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor">
+                  <path d="M15 17.5s.5 0 1 1c0 0 1.588-2.5 3-3" />
+                  <path d="M22 17a5 5 0 1 1-10 0a5 5 0 0 1 10 0m-6.971-7.755a3.5 3.5 0 1 0-5.301 4.417" />
+                  <path
+                    d="M21.984 10.74c-.024-.54-.387-1.198-1.193-2.588l-1.924-3.316c-.803-1.384-1.205-2.076-1.865-2.456S15.54 2 13.937 2h-3.874c-1.603 0-2.405 0-3.065.38S5.936 3.452 5.133 4.836L3.21 8.152C2.403 9.542 2 10.237 2 11s.403 1.458 1.21 2.848l1.923 3.316c.803 1.384 1.205 2.076 1.865 2.456c.622.3 1 .38 2.602.38"
+                  />
+                </g>
+              </svg>
+              Configuration
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-10 d-flex my-auto bg-light align-self-center">
+        <h6 class="mt-2 mx-4 text-dark align-self-center">Work Order</h6>
+      </div>
+    </header>
+
+    <aside class="container-fluid">
+      <nav class="col-2 d-md-block sidebar collapse" id="sidebar">
+        <div class="position-sticky sidebar-sticky d-flex flex-column justify-content-between">
+          <ul class="nav flex-column gap-2 mt-2">
+            <h6 class="fs-xs px-3">Workspace</h6>
+            <li class="nav-item px-3">
+              <a class="nav-link active text-light bg-primary rounded-2 d-flex align-items-center gap-2" aria-current="page" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                  <g fill="currentColor">
+                    <path d="M4 16s-1 0-1-1s1-4 5-4s5 3 5 4s-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5" />
+                    <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z" />
+                  </g>
+                </svg>
+                My Workspace
+              </a>
+            </li>
+            <h6 class="fs-xs px-3 mt-3">Menu</h6>
+            <li class="nav-item px-3">
+              <a href="projectlist.html" class="nav-link active text-light bg-primary rounded-2 d-flex align-items-center gap-2" aria-current="page" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M22 13.478V18a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-4.522l.553.277a21 21 0 0 0 18.897-.002zM14 2a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447.724a19 19 0 0 1-16.726.186l-.647-.32l-1.18-.59V9a3 3 0 0 1 3-3h2V5a3 3 0 0 1 3-3zm-2 8a1 1 0 0 0-1 1a1 1 0 1 0 2 .01c0-.562-.448-1.01-1-1.01m2-6h-4a1 1 0 0 0-1 1v1h6V5a1 1 0 0 0-1-1"
+                  />
+                </svg>
+                Project
+              </a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link active text-dark rounded-2 d-flex align-items-center gap-2" aria-current="page" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                  <path
+                    fill="currentColor"
+                    d="M84 108a12 12 0 0 1 12-12h64a12 12 0 0 1 0 24H96a12 12 0 0 1-12-12m32 28H96a12 12 0 0 0 0 24h20a12 12 0 0 0 0-24m112-88v108.69a19.86 19.86 0 0 1-5.86 14.14l-51.31 51.31a19.86 19.86 0 0 1-14.14 5.86H48a20 20 0 0 1-20-20V48a20 20 0 0 1 20-20h160a20 20 0 0 1 20 20M52 204h92v-48a12 12 0 0 1 12-12h48V52H52Zm139-36h-23v23Z"
+                  />
+                </svg>
+                Lesson Learned
+              </a>
+            </li>
+            <h6 class="fs-xs px-3 mt-3">Master Data</h6>
+            <li class="nav-item px-3">
+              <a class="nav-link active text-dark rounded-2 d-flex align-items-center gap-2" aria-current="page" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M4 18a2 2 0 1 0 4 0a2 2 0 1 0-4 0m12 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6 12v-2a6 6 0 1 1 12 0v2" />
+                    <path d="m15 9l3 3l3-3" />
+                  </g>
+                </svg>
+                Status
+              </a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link active text-dark rounded-2 d-flex align-items-center gap-2" aria-current="page" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="m21.71 20.29l-1.42 1.42a1 1 0 0 1-1.41 0L7 9.85A3.8 3.8 0 0 1 6 10a4 4 0 0 1-3.78-5.3l2.54 2.54l.53-.53l1.42-1.42l.53-.53L4.7 2.22A4 4 0 0 1 10 6a3.8 3.8 0 0 1-.15 1l11.86 11.88a1 1 0 0 1 0 1.41M2.29 18.88a1 1 0 0 0 0 1.41l1.42 1.42a1 1 0 0 0 1.41 0l5.47-5.46l-2.83-2.83M20 2l-4 2v2l-2.17 2.17l2 2L18 8h2l2-4Z"
+                  />
+                </svg>
+                Material
+              </a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link active text-dark rounded-2 d-flex align-items-center gap-2" aria-current="page" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                  <path
+                    fill="currentColor"
+                    d="M28 64a12 12 0 0 1 12-12h176a12 12 0 0 1 0 24H40a12 12 0 0 1-12-12m12 76h48a12 12 0 0 0 0-24H40a12 12 0 0 0 0 24m64 40H40a12 12 0 0 0 0 24h64a12 12 0 0 0 0-24m135.64-33.13l-20.58 17l6.25 25.26a12 12 0 0 1-17.73 13.22L184 188.46l-23.58 13.88a12 12 0 0 1-17.73-13.22l6.25-25.26l-20.58-17a12 12 0 0 1 6.72-21.22l27.42-2.12L173 99.25a12 12 0 0 1 22 0l10.48 24.28l27.42 2.12a12 12 0 0 1 6.72 21.22Zm-38.21.42l-5-.39a12 12 0 0 1-10.09-7.21l-2.33-5.4l-2.33 5.4a12 12 0 0 1-10.1 7.21l-5 .39l3.48 2.87a12 12 0 0 1 4 12.13l-1.21 4.89l5.07-3a12.06 12.06 0 0 1 12.18 0l5.07 3l-1.17-4.89a12 12 0 0 1 4-12.13Z"
+                  />
+                </svg>
+                Project Type
+              </a>
+            </li>
+          </ul>
+          <div class="btn-group dropup">
+            <button type="button" class="btn mb-2 d-flex gap-2 align-items-center text-center" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                <g fill="currentColor">
+                  <path d="M32 20a8 8 0 1 1-16 0a8 8 0 0 1 16 0" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M23.184 43.984C12.517 43.556 4 34.772 4 24C4 12.954 12.954 4 24 4s20 8.954 20 20s-8.954 20-20 20h-.274q-.272 0-.542-.016M11.166 36.62a3.028 3.028 0 0 1 2.523-4.005c7.796-.863 12.874-.785 20.632.018a2.99 2.99 0 0 1 2.498 4.002A17.94 17.94 0 0 0 42 24c0-9.941-8.059-18-18-18S6 14.059 6 24c0 4.916 1.971 9.373 5.166 12.621"
+                    clip-rule="evenodd"
+                  />
+                </g>
+              </svg>
+              Elang Rimba Jaya
+            </button>
+            <ul class="dropdown-menu w-100 p-2">
+              <li class="bg-danger px-3 py-2 rounded-2 text-center">
+                <a href="/index.html" class="text-white text-decoration-none text-center">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <!-- Project Form -->
+      <form class="w-75 m-auto my-4 p-4 bg-form">
+        <h6 class="text-center mb-3 fw-semibold fs-4">Create Work Order</h6>
+        <div class="mb-3">
+          <label for="title" class="form-label fw-semibold fs-sm">Title</label>
+          <input type="text" class="form-control" id="title" />
+        </div>
+        <div class="mb-3">
+          <label for="wo-number" class="form-label fw-semibold fs-sm">WO Number</label>
+          <input type="text" class="form-control" id="wo-number" placeholder="WO Number" />
+        </div>
+        <div class="mb-3">
+          <label for="startdate" class="form-label fw-semibold fs-sm">Start Date</label>
+          <input type="date" class="form-control" id="startdate" />
+        </div>
+        <div class="mb-3">
+          <label for="enddate" class="form-label fw-semibold fs-sm">End Date</label>
+          <input type="date" class="form-control" id="enddate" />
+        </div>
+        <div class="mb-3">
+          <label for="payment-status" class="form-label fw-semibold fs-sm">Payment Status</label>
+          <select id="payment-status" class="form-select">
+            <option selected disabled>Unpaid</option>
+            <option>Status 1</option>
+            <option>Status 2</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label fw-semibold fs-sm">Location</label>
+          <input type="name" class="form-control" id="location" placeholder="Location" />
+        </div>
+        <div class="mb-3">
+          <label for="status" class="form-label fw-semibold fs-sm">Status</label>
+          <select id="status" class="form-select">
+            <option selected disabled>Choose Status</option>
+            <option>Status 1</option>
+            <option>Status 2</option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-end align-items-center mt-5 gap-4">
+          <a href="workorder-list.html" type="cancel" class="btn btn-outline-danger">Cancel</a>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </main>
+    <!-- Bootstrap Bundle Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
