@@ -1,0 +1,3 @@
+- Sebelum mencoba, pastikan komputer terkoneksi dengan INTERNET
+- Karena penggunaan Bootstrap melalui CDN
+- Terima Kasih😊😊
