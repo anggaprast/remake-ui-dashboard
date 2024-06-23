@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/css/style.css" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+    <!-- Script Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
@@ -95,8 +98,19 @@
           </li>
         </ul>
       </div>
-      <div class="col-10 d-flex my-auto bg-light align-self-center">
-        <h6 class="mt-2 mx-4 text-dark align-self-center">Projects</h6>
+      <div class="col-10 d-flex my-auto bg-light align-items-center justify-content-between px-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb text-dark align-items-center d-flex">
+            <li class="breadcrumb-item"><a href="#">Projects</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Rehabilitasi Pos Pantau Palopo</li>
+            <li class="breadcrumb-item active" aria-current="page">Penambahan Sumur dan Pompa</li>
+          </ol>
+        </nav>
+        <a href="#" class="align-self-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0" />
+          </svg>
+        </a>
       </div>
     </header>
 
@@ -118,7 +132,7 @@
             </li>
             <h6 class="fs-xs px-3 mt-3">Menu</h6>
             <li class="nav-item px-3">
-              <a class="nav-link active text-light bg-primary rounded-2 d-flex align-items-center gap-2" aria-current="page" href="#">
+              <a href="projectlist.html" class="nav-link active text-light bg-primary rounded-2 d-flex align-items-center gap-2" aria-current="page" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -199,149 +213,168 @@
     </aside>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <!-- Filter Navigation -->
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <div class="d-flex gap-2">
-          <a href="project-create.html" type="button" class="btn btn-primary btn-sm d-flex gap-2 align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z" /></svg>
-            New Project
-          </a>
-          <a type="button" class="btn btn-outline-success btn-sm d-flex gap-2 align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
-              <path
-                fill="currentColor"
-                d="M160 208a12 12 0 0 1-12 12h-28a12 12 0 0 1-12-12v-56a12 12 0 0 1 24 0v44h16a12 12 0 0 1 12 12m-69-65.78A12 12 0 0 0 74.24 145L64 159.34L53.77 145a12 12 0 1 0-19.53 14l15 21l-15 21a12 12 0 1 0 19.53 14L64 200.62L74.24 215a12 12 0 0 0 19.53-14l-15-21l15-21A12 12 0 0 0 91 142.22m122.53 32.05c-5.12-3.45-11.32-5.24-16.79-6.82a80 80 0 0 1-7.92-2.59c2.45-1.18 9.71-1.3 16.07.33A12 12 0 0 0 211 142a69 69 0 0 0-12-1.86c-9.93-.66-18 1.08-24.1 5.17a24.45 24.45 0 0 0-10.69 17.76c-1.1 8.74 2.49 16.27 10.11 21.19c4.78 3.09 10.36 4.7 15.75 6.26c3 .89 7.94 2.3 9.88 3.53a2.5 2.5 0 0 1-.21.71c-1.37 1.55-9.58 1.79-16.39-.06a12 12 0 1 0-6.46 23.11A63.8 63.8 0 0 0 193.1 220c6.46 0 13.73-1.17 19.73-5.15a24.73 24.73 0 0 0 10.95-18c1.22-9.32-2.45-17.32-10.27-22.58ZM36 108V40a20 20 0 0 1 20-20h96a12 12 0 0 1 8.49 3.51l56 56A12 12 0 0 1 220 88v20a12 12 0 1 1-24 0v-4h-48a12 12 0 0 1-12-12V44H60v64a12 12 0 1 1-24 0m124-28h23l-23-23Z"
-              />
-            </svg>
-            Export to XLS
-          </a>
-          <button type="button" class="btn btn-outline-success btn-sm d-flex gap-2 align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
-              <path
-                fill="currentColor"
-                d="M48 180c0 8.67 5.49 16 12 16a10.27 10.27 0 0 0 7.33-3.43a12 12 0 1 1 17.34 16.6A34 34 0 0 1 60 220c-19.85 0-36-18-36-40s16.15-40 36-40a34 34 0 0 1 24.67 10.83a12 12 0 1 1-17.34 16.6A10.27 10.27 0 0 0 60 164c-6.51 0-12 7.31-12 16m97.51-5.71c-5.13-3.45-11.33-5.24-16.8-6.82a80 80 0 0 1-7.91-2.59c2.45-1.18 9.71-1.3 16.07.33A12 12 0 0 0 143 142a69 69 0 0 0-12-1.86c-9.93-.66-18 1.08-24.1 5.17a24.45 24.45 0 0 0-10.69 17.76c-1.1 8.74 2.48 16.27 10.11 21.19c4.78 3.09 10.36 4.7 15.75 6.26c3 .89 7.94 2.3 9.88 3.53a2 2 0 0 1-.22.71c-1.36 1.55-9.57 1.79-16.39-.06a12 12 0 0 0-6.45 23.11a63.7 63.7 0 0 0 16.2 2.19c6.47 0 13.74-1.17 19.74-5.15a24.73 24.73 0 0 0 10.95-18c1.22-9.32-2.46-17.32-10.27-22.58ZM216 140.68a12 12 0 0 0-15.3 7.32l-8.7 24.3l-8.7-24.3a12 12 0 1 0-22.6 8l20 56a12 12 0 0 0 22.6 0l20-56a12 12 0 0 0-7.3-15.32M36 108V40a20 20 0 0 1 20-20h96a12 12 0 0 1 8.49 3.51l56 56A12 12 0 0 1 220 88v20a12 12 0 1 1-24 0v-4h-48a12 12 0 0 1-12-12V44H60v64a12 12 0 1 1-24 0m124-28h23l-23-23Z"
-              />
-            </svg>
-            Export to CSV
-          </button>
-        </div>
-        <div class="d-flex gap-2">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 fs-xs" type="search" placeholder="Search" aria-label="Search" />
-          </form>
-          <button type="button" class="btn btn-primary btn-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="currentColor" d="m12 .845l9.66 5.578v11.154L12 23.155l-9.66-5.578V6.423zm0 2.31L4.34 7.577v8.846L12 20.845l7.66-4.422V7.577zM12 9a3 3 0 1 0 0 6a3 3 0 0 0 0-6m-5 3a5 5 0 1 1 10 0a5 5 0 0 1-10 0" />
-            </svg>
-          </button>
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <a href="#" type="button" class="btn btn-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21H5q-.825 0-1.412-.587T3 19M5 9h14V5H5zm5.325 5h3.35v-3h-3.35zm0 5h3.35v-3h-3.35zM5 14h3.325v-3H5zm10.675 0H19v-3h-3.325zM5 19h3.325v-3H5zm10.675 0H19v-3h-3.325z"
-                />
-              </svg>
-            </a>
-            <a href="projectlist-kanban.html" type="button" class="btn btn-outline-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
-                <path
-                  fill="currentColor"
-                  d="M216 44H40a12 12 0 0 0-12 12v152a20 20 0 0 0 20 20h40a20 20 0 0 0 20-20v-44h40v12a20 20 0 0 0 20 20h40a20 20 0 0 0 20-20V56a12 12 0 0 0-12-12m-12 64h-32V68h32ZM84 68v40H52V68Zm0 136H52v-72h32Zm24-64V68h40v72Zm64 32v-40h32v40Z"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
+      <ul class="nav nav-tabs mt-3">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Summary</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="workorder-input.html">Input Plan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Daily Report</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Detail</a>
+        </li>
+      </ul>
 
+      <!-- Chart -->
+      <canvas id="myChart" class="my-4"></canvas>
       <!-- Table View -->
-      <table class="table table-bordered">
+      <table class="table table-bordered mb-4">
         <thead class="bg-secondary">
-          <tr class="text-center text-light fw-bold fs-sm">
-            <th scope="col" id="tableid">No</th>
-            <th scope="col" class="col-4">Project</th>
-            <th scope="col">Project Type</th>
-            <th scope="col">Customer</th>
+          <tr class="text-center align-middle text-light fw-bold fs-sm">
+            <th scope="col" class="col-3">Activity Name</th>
             <th scope="col">Start Date</th>
             <th scope="col">End Date</th>
+            <th scope="col">Status</th>
             <th scope="col">Progress Complete (%)</th>
           </tr>
         </thead>
         <tbody class="fs-xs">
-          <tr>
-            <th class="text-center">1</th>
-            <td><a href="workorder-list.html">Rehabilitasi Pos Pantau Palopo</a></td>
-            <td>Operation & Maintenance</td>
-            <td>Kemenhub</td>
-            <td>-</td>
-            <td>-</td>
+          <tr class="bg-teal">
+            <td class="fw-semibold">PENAMBAHAN SUMUR DAN POMPA</td>
+            <td>10-06-2024</td>
+            <td>14-06-2024</td>
+            <td class="d-flex align-items-center gap-2">
+              <div class="spinner-border spinner-border-sm text-danger" role="status"></div>
+              (Delay)
+            </td>
             <td>
               <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 75.75%">75.75%</div>
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 38%">38%</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="bg-warning">
+            <td class="fw-semibold">PERENCANAAN</td>
+            <td>10-06-2024</td>
+            <td>10-06-2024</td>
+            <td class="d-flex align-items-center gap-2">
+              <div class="spinner-grow spiners spinner-grow-sm text-success" role="status"></div>
+              (On Track)
+            </td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%">100%</div>
               </div>
             </td>
           </tr>
           <tr>
-            <th class="text-center">2</th>
-            <td>Pengadaan Konstruksi Renovasi Rumah Dinas KPP Pratama Sintang</td>
-            <td>Capital-base</td>
-            <td>Kemenkeu</td>
-            <td>-</td>
-            <td>-</td>
+            <td>Survey Lokasi</td>
+            <td>10-06-2024</td>
+            <td>10-06-2024</td>
+            <td class="d-flex align-items-center gap-2">
+              <div class="spinner-grow spiners spinner-grow-sm text-success" role="status"></div>
+              (On Track)
+            </td>
             <td>
               <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 52%">52%</div>
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%">100%</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="bg-warning">
+            <td class="fw-semibold">PENGERJAAN</td>
+            <td>11-06-2024</td>
+            <td>13-06-2024</td>
+            <td class="d-flex align-items-center gap-2">
+              <div class="spinner-border spinner-border-sm text-danger" role="status"></div>
+              (Delay)
+            </td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 30%">30%</div>
               </div>
             </td>
           </tr>
           <tr>
-            <th class="text-center">3</th>
-            <td>Pembangunan Reservoir SPAM Kota Manado (NUWSP)</td>
-            <td>Capital-based</td>
-            <td>PUPR</td>
-            <td>-</td>
-            <td>-</td>
+            <td>Penggalian Sumur</td>
+            <td>11-06-2024</td>
+            <td>12-06-2024</td>
+            <td class="d-flex align-items-center gap-2">
+              <div class="spinner-border spiners spinner-border-sm text-danger" role="status"></div>
+              (Delay)
+            </td>
             <td>
               <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 92%">92%</div>
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 40%">40%</div>
               </div>
             </td>
           </tr>
           <tr>
-            <th class="text-center">4</th>
-            <td>Rehab PAUD, Mess Rektor, dan Pagar Mess UNIB</td>
-            <td>Operation & Maintenance</td>
-            <td>Kemendikbud</td>
-            <td>-</td>
-            <td>-</td>
+            <td>Pembelian Pompa</td>
+            <td>11-06-2024</td>
+            <td>11-06-2024</td>
+            <td class="d-flex align-items-center gap-2">
+              <div class="spinner-border spiners spinner-border-sm text-danger" role="status"></div>
+              (Delay)
+            </td>
             <td>
               <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 15%">15%</div>
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 50%">50%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Pemasangan Pompa</td>
+            <td>13-06-2024</td>
+            <td>13-06-2024</td>
+            <td class="d-flex align-items-center gap-2">
+              <div class="spinner-border spiners spinner-border-sm text-danger" role="status"></div>
+              (Delay)
+            </td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="bg-warning">
+            <td class="fw-semibold">TESTING</td>
+            <td>14-06-2024</td>
+            <td>14-06-2024</td>
+            <td class="d-flex align-items-center gap-2">
+              <div class="spinner-border spinner-border-sm text-danger" role="status"></div>
+              (Delay)
+            </td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Uji Fungsi</td>
+            <td>14-06-2024</td>
+            <td>14-06-2024</td>
+            <td class="d-flex align-items-center gap-2">
+              <div class="spinner-border spiners spinner-border-sm text-danger" role="status"></div>
+              (Delay)
+            </td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
               </div>
             </td>
           </tr>
         </tbody>
       </table>
-      <nav class="text-center d-flex justify-content-center mt-5">
-        <ul class="pagination pagination-sm">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link active" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
     </main>
     <!-- Bootstrap Bundle Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- Chart JS -->
+    <script src="/js/script.js"></script>
   </body>
 </html>

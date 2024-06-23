@@ -17,6 +17,16 @@ body {
   background: linear-gradient(295deg, rgba(74, 125, 247, 1) 0%, rgba(105, 189, 255, 1) 35%, rgba(10, 173, 207, 1) 100%);
 }
 
+.background-img {
+  position: absolute;
+  opacity: 30%;
+  z-index: -50;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 .w-40 {
   width: 462px;
 }
@@ -96,4 +106,21 @@ table #payment {
 
 .bg-teal {
   background-color: rgb(64, 249, 147);
+}
+
+main #addkanban {
+  font-size: 12px;
+}
+
+.row .bg-implementasi {
+  background-color: rgb(213, 227, 252);
+}
+.row .bg-ujifungsi {
+  background-color: rgb(252, 225, 213);
+}
+.row .bg-selesai {
+  background-color: rgb(213, 252, 217);
+}
+.row .bg-pemeliharaan {
+  background-color: rgb(222, 222, 222);
 }

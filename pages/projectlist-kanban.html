@@ -118,7 +118,7 @@
             </li>
             <h6 class="fs-xs px-3 mt-3">Menu</h6>
             <li class="nav-item px-3">
-              <a class="nav-link active text-light bg-primary rounded-2 d-flex align-items-center gap-2" aria-current="page" href="#">
+              <a href="projectlist.html" class="nav-link active text-light bg-primary rounded-2 d-flex align-items-center gap-2" aria-current="page" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -235,7 +235,7 @@
             </svg>
           </button>
           <div class="btn-group" role="group" aria-label="Basic example">
-            <a href="#" type="button" class="btn btn-primary">
+            <a href="projectlist.html" type="button" class="btn btn-outline-primary">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
@@ -243,7 +243,7 @@
                 />
               </svg>
             </a>
-            <a href="projectlist-kanban.html" type="button" class="btn btn-outline-primary">
+            <a href="#" type="button" class="btn btn-primary">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
                 <path
                   fill="currentColor"
@@ -255,91 +255,244 @@
         </div>
       </div>
 
-      <!-- Table View -->
-      <table class="table table-bordered">
-        <thead class="bg-secondary">
-          <tr class="text-center text-light fw-bold fs-sm">
-            <th scope="col" id="tableid">No</th>
-            <th scope="col" class="col-4">Project</th>
-            <th scope="col">Project Type</th>
-            <th scope="col">Customer</th>
-            <th scope="col">Start Date</th>
-            <th scope="col">End Date</th>
-            <th scope="col">Progress Complete (%)</th>
-          </tr>
-        </thead>
-        <tbody class="fs-xs">
-          <tr>
-            <th class="text-center">1</th>
-            <td><a href="workorder-list.html">Rehabilitasi Pos Pantau Palopo</a></td>
-            <td>Operation & Maintenance</td>
-            <td>Kemenhub</td>
-            <td>-</td>
-            <td>-</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 75.75%">75.75%</div>
+      <!-- Kanban View -->
+      <div class="d-flex mb-3">
+        <a href="#" type="button" id="addkanban" class="btn btn-outline-success btn-sm d-flex gap-2 align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z" /></svg>
+          Add Another Status
+        </a>
+      </div>
+
+      <div class="row">
+        <!-- Implementasi -->
+        <div class="col d-flex flex-column h-auto">
+          <div class="card text-dark bg-implementasi mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <div class="d-flex gap-1 align-items-center text-primary fs-sm fw-semibold">Implamentasi<span class="badge bg-success">1</span></div>
+              <a href="#" class="align-self-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0" />
+                </svg>
+              </a>
+            </div>
+            <div class="card-body">
+              <!-- Content 1 -->
+              <div class="card mb-3">
+                <div class="card-body">
+                  <p class="card-text fs-xs fw-semibold">Pengadaan Konstruksi Renovasi Rumah Dinas KPP Pratama Siantang</p>
+                  <div class="d-flex justify-content-between">
+                    <!-- Employee -->
+                    <div class="btn-group">
+                      <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <g fill="none">
+                            <path
+                              d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                            />
+                            <path
+                              fill="currentColor"
+                              d="M13 13a4 4 0 0 1 4 4v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2 18.5V17a4 4 0 0 1 4-4zm6 0a3 3 0 0 1 3 3v1.5a1.5 1.5 0 0 1-1.5 1.5H19v-2a5 5 0 0 0-2-4zM9.5 3a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9M18 6a3 3 0 1 1 0 6a3 3 0 0 1 0-6"
+                            />
+                          </g>
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu"></ul>
+                    </div>
+                    <!-- Date -->
+                    <div class="btn-group">
+                      <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <path
+                            fill="currentColor"
+                            d="M8 14q-.425 0-.712-.288T7 13t.288-.712T8 12t.713.288T9 13t-.288.713T8 14m4 0q-.425 0-.712-.288T11 13t.288-.712T12 12t.713.288T13 13t-.288.713T12 14m4 0q-.425 0-.712-.288T15 13t.288-.712T16 12t.713.288T17 13t-.288.713T16 14M5 22q-.825 0-1.412-.587T3 20V6q0-.825.588-1.412T5 4h1V2h2v2h8V2h2v2h1q.825 0 1.413.588T21 6v14q0 .825-.587 1.413T19 22zm0-2h14V10H5z"
+                          />
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu"></ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <th class="text-center">2</th>
-            <td>Pengadaan Konstruksi Renovasi Rumah Dinas KPP Pratama Sintang</td>
-            <td>Capital-base</td>
-            <td>Kemenkeu</td>
-            <td>-</td>
-            <td>-</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 52%">52%</div>
+              <!-- Add New Content -->
+              <a href="#" type="button" id="addkanban" class="btn btn-outline-primary btn-sm d-flex gap-2 align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z" /></svg>
+                New Project
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Uji Fungsi -->
+        <div class="col d-flex flex-column h-auto">
+          <div class="card text-dark bg-ujifungsi mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <div class="d-flex gap-1 align-items-center text-danger fs-sm fw-semibold">Uji Fungsi<span class="badge bg-success">1</span></div>
+              <a href="#" class="align-self-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0" />
+                </svg>
+              </a>
+            </div>
+            <div class="card-body">
+              <!-- Content 1 -->
+              <div class="card mb-3">
+                <div class="card-body">
+                  <p class="card-text fs-xs fw-semibold">Pembangunan Reservoir SPAM Kota Manado (NUWSP)</p>
+                  <div class="d-flex justify-content-between">
+                    <!-- Employee -->
+                    <div class="btn-group">
+                      <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <g fill="none">
+                            <path
+                              d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                            />
+                            <path
+                              fill="currentColor"
+                              d="M13 13a4 4 0 0 1 4 4v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2 18.5V17a4 4 0 0 1 4-4zm6 0a3 3 0 0 1 3 3v1.5a1.5 1.5 0 0 1-1.5 1.5H19v-2a5 5 0 0 0-2-4zM9.5 3a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9M18 6a3 3 0 1 1 0 6a3 3 0 0 1 0-6"
+                            />
+                          </g>
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu"></ul>
+                    </div>
+                    <!-- Date -->
+                    <div class="btn-group">
+                      <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <path
+                            fill="currentColor"
+                            d="M8 14q-.425 0-.712-.288T7 13t.288-.712T8 12t.713.288T9 13t-.288.713T8 14m4 0q-.425 0-.712-.288T11 13t.288-.712T12 12t.713.288T13 13t-.288.713T12 14m4 0q-.425 0-.712-.288T15 13t.288-.712T16 12t.713.288T17 13t-.288.713T16 14M5 22q-.825 0-1.412-.587T3 20V6q0-.825.588-1.412T5 4h1V2h2v2h8V2h2v2h1q.825 0 1.413.588T21 6v14q0 .825-.587 1.413T19 22zm0-2h14V10H5z"
+                          />
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu"></ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <th class="text-center">3</th>
-            <td>Pembangunan Reservoir SPAM Kota Manado (NUWSP)</td>
-            <td>Capital-based</td>
-            <td>PUPR</td>
-            <td>-</td>
-            <td>-</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 92%">92%</div>
+              <!-- Add New Content -->
+              <a href="#" type="button" id="addkanban" class="btn btn-outline-primary btn-sm d-flex gap-2 align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z" /></svg>
+                New Project
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Selesai -->
+        <div class="col d-flex flex-column h-auto">
+          <div class="card text-dark bg-selesai mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <div class="d-flex gap-1 align-items-center text-success fs-sm fw-semibold">Selesai<span class="badge bg-success">0</span></div>
+              <a href="#" class="align-self-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0" />
+                </svg>
+              </a>
+            </div>
+            <div class="card-body">
+              <!-- Add New Content -->
+              <a href="#" type="button" id="addkanban" class="btn btn-outline-primary btn-sm d-flex gap-2 align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z" /></svg>
+                New Project
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Pemeliharaan -->
+        <div class="col d-flex flex-column h-auto">
+          <div class="card text-dark bg-pemeliharaan mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <div class="d-flex gap-1 align-items-center text-dark fs-sm fw-semibold">Pemeliharaan<span class="badge bg-success">2</span></div>
+              <a href="#" class="align-self-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0m7 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0" />
+                </svg>
+              </a>
+            </div>
+            <div class="card-body">
+              <!-- Content 1 -->
+              <div class="card mb-3">
+                <div class="card-body">
+                  <p class="card-text fs-xs fw-semibold">Rehab PAUD, Mess Rektor, dan Pagar Mess UNIB</p>
+                  <div class="d-flex justify-content-between">
+                    <!-- Employee -->
+                    <div class="btn-group">
+                      <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <g fill="none">
+                            <path
+                              d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                            />
+                            <path
+                              fill="currentColor"
+                              d="M13 13a4 4 0 0 1 4 4v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2 18.5V17a4 4 0 0 1 4-4zm6 0a3 3 0 0 1 3 3v1.5a1.5 1.5 0 0 1-1.5 1.5H19v-2a5 5 0 0 0-2-4zM9.5 3a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9M18 6a3 3 0 1 1 0 6a3 3 0 0 1 0-6"
+                            />
+                          </g>
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu"></ul>
+                    </div>
+                    <!-- Date -->
+                    <div class="btn-group">
+                      <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <path
+                            fill="currentColor"
+                            d="M8 14q-.425 0-.712-.288T7 13t.288-.712T8 12t.713.288T9 13t-.288.713T8 14m4 0q-.425 0-.712-.288T11 13t.288-.712T12 12t.713.288T13 13t-.288.713T12 14m4 0q-.425 0-.712-.288T15 13t.288-.712T16 12t.713.288T17 13t-.288.713T16 14M5 22q-.825 0-1.412-.587T3 20V6q0-.825.588-1.412T5 4h1V2h2v2h8V2h2v2h1q.825 0 1.413.588T21 6v14q0 .825-.587 1.413T19 22zm0-2h14V10H5z"
+                          />
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu"></ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <th class="text-center">4</th>
-            <td>Rehab PAUD, Mess Rektor, dan Pagar Mess UNIB</td>
-            <td>Operation & Maintenance</td>
-            <td>Kemendikbud</td>
-            <td>-</td>
-            <td>-</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 15%">15%</div>
+              <!-- Content 2 -->
+              <div class="card mb-3">
+                <div class="card-body">
+                  <p><a href="workorder-list.html" class="card-text fs-xs fw-semibold">Rehabilitasi Pos Pantau Palopo</a></p>
+                  <div class="d-flex justify-content-between">
+                    <!-- Employee -->
+                    <div class="btn-group">
+                      <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <g fill="none">
+                            <path
+                              d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                            />
+                            <path
+                              fill="currentColor"
+                              d="M13 13a4 4 0 0 1 4 4v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2 18.5V17a4 4 0 0 1 4-4zm6 0a3 3 0 0 1 3 3v1.5a1.5 1.5 0 0 1-1.5 1.5H19v-2a5 5 0 0 0-2-4zM9.5 3a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9M18 6a3 3 0 1 1 0 6a3 3 0 0 1 0-6"
+                            />
+                          </g>
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu"></ul>
+                    </div>
+                    <!-- Date -->
+                    <div class="btn-group">
+                      <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <path
+                            fill="currentColor"
+                            d="M8 14q-.425 0-.712-.288T7 13t.288-.712T8 12t.713.288T9 13t-.288.713T8 14m4 0q-.425 0-.712-.288T11 13t.288-.712T12 12t.713.288T13 13t-.288.713T12 14m4 0q-.425 0-.712-.288T15 13t.288-.712T16 12t.713.288T17 13t-.288.713T16 14M5 22q-.825 0-1.412-.587T3 20V6q0-.825.588-1.412T5 4h1V2h2v2h8V2h2v2h1q.825 0 1.413.588T21 6v14q0 .825-.587 1.413T19 22zm0-2h14V10H5z"
+                          />
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu"></ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <nav class="text-center d-flex justify-content-center mt-5">
-        <ul class="pagination pagination-sm">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link active" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+              <!-- Add New Content -->
+              <a href="#" type="button" id="addkanban" class="btn btn-outline-primary btn-sm d-flex gap-2 align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z" /></svg>
+                New Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <!-- Bootstrap Bundle Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
