@@ -12,5 +12,6 @@
    - Click "New Work Order" (to show forn Create Work Order Page ✔️)
    - CLick "Detail" in top navigation (to show Project Detail Page ✔️)
    - Click "Penambahan Sumur" (redirect to (4)Work Order Summary Page ✔️)
+   - Kindly refresh the page jika chart tidak tertampilkan
 4. Work Order Summary Page
    - Click "Input Plan" in top navigation (to show Work Order Input Plan Page ✔️)
